@@ -1,0 +1,6 @@
+rm -rf {,.[!.],..?}*
+!git clone --quiet -b virtual_try_on_demo https://github.com/pbelevich/frankmocap.git frankmocap
+!git clone --quiet -b delete_absolute_paths https://github.com/pbelevich/MultiGarmentNetwork.git MultiGarmentNetwork
+!mv frankmocap/* .
+!mv MultiGarmentNetwork/* .
+!rm -rf frankmocap MultiGarmentNetwork
