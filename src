@@ -1,1 +1,18 @@
+!xvfb-run -a python -m demo.demo_bodymocap --input_path ./sample_data/15249886-preview.mp4 --out_dir ./mocap_output --renderer_type pytorch3d
+from IPython.display import HTML
+from base64 import b64encode
+import os
 
+save_path = "./mocap_output/15249886-preview.mp4"
+
+compressed_path = "./mocap_output/15249886-preview_compressed.mp4"
+
+os.system(f"ffmpeg -i {save_path} -vcodec libx264 {compressed_path}")
+
+mp4 = open(compressed_path,'rb').read()
+data_url = "data:video/mp4;base64," + b64encode(mp4).decode()
+HTML("""
+<video width=400 controls>
+      <source src="%s" type="video/mp4">
+</video>
+""" % data_url)
