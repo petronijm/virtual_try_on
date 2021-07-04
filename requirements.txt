@@ -1,1 +1,4 @@
+!apt-get install -qq libboost-dev xvfb libosmesa6-dev
 !pip install -q -r docs/requirements.txt
+!pip install -q torchgeometry chumpy opendr
+!pip install -q 'git+https://github.com/facebookresearch/pytorch3d.git@stable'
