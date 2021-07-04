@@ -1,0 +1,3 @@
+!mkdir -p extra_data/smpl
+!test -f smplify_public_v2.zip || gdown --id 1BwNtKvArmUdy4Cpkx1seIlsHinopdaws
+!unzip -n -p mpips-smplify_public_v2.zip smplify_public/code/models/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl > extra_data/smpl/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl
