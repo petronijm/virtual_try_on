@@ -1,0 +1,3 @@
+!sh scripts/install_pose2d.sh
+!sh scripts/download_data_body_module.sh
+!sh scripts/download_sample_data.sh
