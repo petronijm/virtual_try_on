@@ -1,0 +1,2 @@
+!test -d mesh_dir || git clone --quiet https://github.com/pbelevich/mesh.git mesh_dir
+!cd mesh_dir && make all
