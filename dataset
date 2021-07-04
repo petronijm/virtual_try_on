@@ -1,0 +1,5 @@
+!test -f Multi-Garmentdataset.zip || wget -q -nc https://datasets.d2.mpi-inf.mpg.de/MultiGarmentNetwork/Multi-Garmentdataset.zip
+!test -d Multi-Garmentdataset || unzip -qn Multi-Garmentdataset.zip
+!mkdir -p assets
+!test -f mpips-smplify_public_v2.zip || gdown --id 1BwNtKvArmUdy4Cpkx1seIlsHinopdaws
+!test -f assets/neutral_smpl.pkl || unzip -n -p mpips-smplify_public_v2.zip smplify_public/code/models/basicModel_neutral_lbs_10_207_0_v1.0.0.pkl > assets/neutral_smpl.pkl
